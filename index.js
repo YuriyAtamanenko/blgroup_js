@@ -175,8 +175,35 @@
 
 // ЗАПИТАТИ У КОРИСТУВАЧА ІМЯ, ПОЧТУ , ТЕЛЕФОН, І ПОКАЗАТИ У КОНСОЛІ "КОРИСТУВАЧ __ ВИКОРИСТОВУЄ  __ ПОЧТУ І __ ТЕЛЕФОН"
 
-const userName = prompt("Введіть ім'я");
-const userMail = prompt("Введіть пошту");
-const userPhone = prompt("Введіть телефон");
+// const userName = prompt("Введіть ім'я");
+// const userMail = prompt("Введіть пошту");
+// const userPhone = prompt("Введіть телефон");
 
-console.log(`КОРИСТУВАЧ ${userName} ВИКОРИСТОВУЄ ${userMail} ПОЧТУ І ${userPhone}`);
+// // console.log(`КОРИСТУВАЧ ${userName} ВИКОРИСТОВУЄ ${userMail} ПОЧТУ І ${userPhone}`);
+// НАПИШІТЬ ПРОГРАМУ, ЯКА БУДЕ ВИЗНАЧАТИ ДОВЖИНУ ІМЕНІ , ЯКЩО ІМЯ БІЛЬШЕ 7 СИМВОЛІВ, КОНСОЛЬ ВИВОДИТЬ "Wow, you  have a REALLY long name!" , ЯКЩО МЕНШЕ 7
+// "Your name isn't very long"
+// const userName = prompt("Введите имя");
+// userName.length >= 7
+//   ? console.log('Wow, you  have a REALLY long name!')
+//   : console.log("Your name isn't very long");
+// НАПИШІТЬ ПРОГРАМУ , ЯКА БУДЕ ЗАПИТУВАТИ У КОРИСТУВАЧА ПЕРІОД ПІДПИСКИ НА СЕРВІС ТА ПОКАЗУВАТИМЕ ЦІНУ ПІДПИСКИ(ВИКОРИСТАЙ IF..ELSE, ТА ПЕРЕПИШИ НА SWITCH)
+// ЯКЩО ДЕНЬ - ціна 1.99
+// ЯУЩО НЕДІЛЯ - ціна 5.99
+// ЯКЩО МІСЯЦЬ - ціна 10.99
+// ЯКЩО РІК - ціна 100.99
+const period = prompt("Введите термин подписки")
+switch (period) {
+    case 'день':
+        console.log('ціна 1.99');
+        break;
+    case 'неделя':
+        console.log('ціна 5.99');
+        break;
+    case 'месяць':
+        console.log('ціна 10.99');
+        break;
+    case 'год':
+        console.log('ціна 100.99');
+        break;
+    default: console.log("Нет подписки")
+}
