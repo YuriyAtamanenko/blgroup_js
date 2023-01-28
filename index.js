@@ -50,19 +50,62 @@
 // Якщо введено пароль "Я головний", то вивести рядок "Здрастуйте!"
 // інакше виводити рядок "Невірний пароль!"
 
-const loginInput = prompt("Введіть логін");
+// const loginInput = prompt("Введіть логін");
 
-if (loginInput === "Адмін") {
-	const passwordInput = prompt("Введіть пароль");
-	if (passwordInput) {
-		if (passwordInput === "Я головний") {
-			console.log("Здрастуйте!");
-		} else {
-			console.log("Невірний пароль!");
-		}
-	} else {
-		console.log("Скасовано");
-	}
-} else {
-	console.log("Я вас не знаю");
-}
+// if (loginInput === "Адмін") {
+// 	const passwordInput = prompt("Введіть пароль");
+// 	if (passwordInput) {
+// 		if (passwordInput === "Я головний") {
+// 			console.log("Здрастуйте!");
+// 		} else {
+// 			console.log("Невірний пароль!");
+// 		}
+// 	} else {
+// 		console.log("Скасовано");
+// 	}
+// } else {
+// 	console.log("Я вас не знаю");
+// }
+
+// При завантаженні сторінки користувачеві пропонується
+// В prompt ввести число. Введення додається до значення
+// Змінної total.
+// Операція введення числа триває до того часу,
+// Поки користувач не натисне кнопку Cancel в prompt.
+// Після того, як користувач припинив введення натиснувши накнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+// Робити перевірку,що користувач ввів саме число, а не довільний набір символів не потрібно.
+
+// let numberInput = prompt('Введите число');
+// let total = 0;
+// let check = false;
+
+// do {
+//   if (numberInput) {
+//     total += Number(numberInput);
+//     check = true;
+//     numberInput = prompt('Введите число');
+//   } else {
+//     check = false;
+//     alert(`Загальна сума введених чисел дорівнює число ${total}.`);
+//   }
+// } while (check);
+
+//  Напишіть цикл, який пропонує ввести число більше 100 через prompt.
+// Якщо якщо відвідувач ввів інше число - попросити
+// Ввести ще раз і так далі.
+// Цикл повинен запитувати число, поки відвідувач не введе число більше 100, або натисне кнопку
+// Скасування в prompt
+
+// let numberInput = prompt('Введите число больше 100');
+// let check = false;
+
+// do {
+//   if (Number(numberInput) < 100) {
+//     check = true;
+//     numberInput = prompt('Введите число больше 100');
+//   } else {
+//     check = false;
+//   }
+// } while (check);
+
+// alert(numberInput);
