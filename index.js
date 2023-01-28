@@ -191,19 +191,44 @@
 // ЯУЩО НЕДІЛЯ - ціна 5.99
 // ЯКЩО МІСЯЦЬ - ціна 10.99
 // ЯКЩО РІК - ціна 100.99
-const period = prompt("Введите термин подписки")
-switch (period) {
-    case 'день':
-        console.log('ціна 1.99');
-        break;
-    case 'неделя':
-        console.log('ціна 5.99');
-        break;
-    case 'месяць':
-        console.log('ціна 10.99');
-        break;
-    case 'год':
-        console.log('ціна 100.99');
-        break;
-    default: console.log("Нет подписки")
-}
+// const period = prompt("Введите термин подписки")
+// switch (period) {
+//     case 'день':
+//         console.log('ціна 1.99');
+//         break;
+//     case 'неделя':
+//         console.log('ціна 5.99');
+//         break;
+//     case 'месяць':
+//         console.log('ціна 10.99');
+//         break;
+//     case 'год':
+//         console.log('ціна 100.99');
+//         break;
+//     default: console.log("Нет подписки")
+// }
+
+// FizzBuzz
+// Потрібно написати функцію, що виводить у консоль числа від 1 до n, де n - це ціле число, яка функція приймає як параметр, з такими умовами:
+
+// виведення fizz замість чисел, кратних 3;
+// виведення buzz замість чисел, кратних 5;
+// виведення fizzbuzz замість чисел, кратних як 3, і 5.
+// чисел, кратних як 3, і 5.
+
+// function numberInput(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('buzz');
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// numberInput(45);
+// numberInput(45);
