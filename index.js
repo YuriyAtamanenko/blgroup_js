@@ -138,5 +138,45 @@
 //   console.log(false);
 // }
 
-const string = "abcde";
-string[0] === "a" ? console.log(true) : console.log(false);
+// const string = "abcde";
+// string[0] === "a" ? console.log(true) : console.log(false);
+
+// Напишіть через свіч пошуку автора мови програмування
+//  пишемо назву мови у шаблонному рядку отримує відповідь мова та автор
+//  PHP Расмус Лердорф
+//  C# група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота
+//  Swift Кріс Латтнер
+//  JS Брендан Ейх
+//  Java Джеймс Гослінг
+//  Python Гвідо ван Россум
+
+// const language = prompt("Введіть мову програмування");
+// switch(language) {
+//     case "PHP":
+//         console.log(`${language} - Расмус Лердорф`);
+//         break;
+//     case "C#":
+//         console.log(`${language} - група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
+//         break;
+//     case "Swift":
+//         console.log(`${language} - Кріс Латтнер`);
+//         break;
+//     case "JS":
+//         console.log(`${language} - Брендан Ейх`);
+//         break;
+//     case "Java":
+//         console.log(`${language} - Джеймс Гослінг`);
+//         break;
+//     case "Python":
+//         console.log(`${language} - Гвідо ван Россум`);
+//         break;
+//     default: console.log(`Автора не знайдено`);
+// }
+
+// ЗАПИТАТИ У КОРИСТУВАЧА ІМЯ, ПОЧТУ , ТЕЛЕФОН, І ПОКАЗАТИ У КОНСОЛІ "КОРИСТУВАЧ __ ВИКОРИСТОВУЄ  __ ПОЧТУ І __ ТЕЛЕФОН"
+
+const userName = prompt("Введіть ім'я");
+const userMail = prompt("Введіть пошту");
+const userPhone = prompt("Введіть телефон");
+
+console.log(`КОРИСТУВАЧ ${userName} ВИКОРИСТОВУЄ ${userMail} ПОЧТУ І ${userPhone}`);
