@@ -283,15 +283,48 @@
 // console.log(word("Паліндром"));
 
 // Напишіть функцію, яка приймає два аргументи і повертає всі числа, які діляться на дільник. Перший аргумент – це масив чисел, а другий – дільник.
-const newArray = [];
+// const newArray = [];
 
-function calculator(array, b) {
-  for (let a of array) {
-    if (a % b === 0) {
-      newArray.push(a);
-    }
-  }
-  return newArray;
-}
+// function calculator(array, b) {
+//   for (let a of array) {
+//     if (a % b === 0) {
+//       newArray.push(a);
+//     }
+//   }
+//   return newArray;
+// }
 
-console.log(calculator([10, 20, 5, 7, 58], 5));
+// console.log(calculator([10, 20, 5, 7, 58], 5));
+
+
+// Напишіть функцію pow(x,n), яка повертає x до ступеня n.
+// Інакше висловлюючись, множить x він n разів і повертає результат.
+// function pow(x, n){
+//     return Math.pow(x, n);
+// }
+// console.log(pow(5, 6))
+
+
+// Напишіть функцію min(a,b), яка повертає менше чисел a і b.
+// function min(a, b){
+// //     if (a > b){
+// //         return b;
+// //     }
+// //    if (a < b){
+// //     return a;
+// //    }
+// return Math.min(a, b)
+// }
+// console.log(min(10, 17))
+
+// Створіть масив styles з елементами «Джаз» та «Блюз».
+//Додайте "Рок-н-рол" в кінець.
+// Замініть значення "Блюз" на "Класика".
+//Видалить перший елемент масиву і виведіть його в консоль.
+//Вставте «Реп» і «Реггі» на початок масиву.
+// const styles = ["Джаз", "Блюз"];
+// styles.push("Рок-н-рол");
+// styles[1] = "Класика";
+// const splice = styles.splice(0, 1);
+// styles.unshift("Реп", "Реггі");
+// console.log(styles);
