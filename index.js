@@ -232,3 +232,35 @@
 
 // numberInput(45);
 // numberInput(45);
+
+// У нас є об'єкт, в якому зберігатимуться зарплати
+// Нашої команди
+// Напишіть код для сумування всіх зарплат і
+// Збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 170,
+// };
+
+// let total = 0;
+
+// // const salary = Object.values(salaries)
+// // console.log(salary)
+
+// for (const salary of Object.values(salaries)) {
+//     total += salary
+// }
+
+// console.log(total)
+
+// Напишіть функцію, яка приймає рядок і перетворює її на число
+
+// function toNumber(string) {
+    
+
+//     return Number(string)
+// }
+// console.log(toNumber(`10`))
