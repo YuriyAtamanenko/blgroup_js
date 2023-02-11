@@ -347,15 +347,15 @@
 // Квадратного коріння для всіх чисел у яких квадратний корінь буде цілим числом і пушити числа в новий масив.
 // Math.sqrt();
 // Number.isInteger();
-const arr = [4, 3, 5, 16, 16, 33, 4, 9];
-const newArr = [];
+// const arr = [4, 3, 5, 16, 16, 33, 4, 9];
+// const newArr = [];
 
-for (const elem of arr) {
-	if (Math.sqrt(elem) % 1 === 0) {
-		newArr.push(elem);
-	}
-}
-console.log(newArr);
+// for (const elem of arr) {
+// 	if (Math.sqrt(elem) % 1 === 0) {
+// 		newArr.push(elem);
+// 	}
+// }
+// console.log(newArr);
 
 //TODO:==========================
 //Напиши функцію findSmallerNumber(numbers)
@@ -370,3 +370,56 @@ console.log(newArr);
 // }
 
 // console.log(findSmallerNumber([2, 5, 35, 56, 12, 24, 7, 80, 3]));
+
+//Напишіть код для пошуку пароля в масиві
+//Через include і тернарний оператор
+// const passwords = ['ajax123', 'polly456', 'mango789', 'semiBold'];
+// const pas = 'mango789';
+
+// passwords.includes(pas) ? console.log(true) : console.log(false);
+
+//Напиши функцію findLongestWord(string)
+//яка приймає довільний рядок
+//що складається лише з розділених слів
+//пробілом (параметр string)
+//і повертає найдовше слово у цьому рядку
+
+// function findLongestWord(string) {
+//   const words = string.split(' ');
+//   let theLongestWord = '';
+//   console.log(words);
+
+//   for (const word of words) {
+//     if (word.length > theLongestWord.length) {
+//       theLongestWord = word;
+//     }
+//   }
+//   return theLongestWord;
+// }
+// console.log(findLongestWord('Я не понимаю JS'));
+
+// Напишіть ф-цію calcTotalPrice(stones, stonesName),
+// яка приймає масив об'єктів та
+// рядок під назвою каменю.
+// Функція вважає м повертає загальну вартість каменів
+// з таким ім'ям, ціною та кількістю з об'єкта
+// const stones = [
+//   { name: 'Изумруд', price: 1300, quantity: 4 },
+//   { name: 'Бриллиант', price: 2700, quantity: 6 },
+//   { name: 'Сапфир', price: 400, quantity: 7 },
+//   { name: 'Щебень', price: 150, quantity: 100 },
+// ];
+
+// let total = 0;
+
+// function calcTotalPrice(stones, stonesName) {
+//   for (const stone of stones) {
+//     if (stone['name'] === stonesName) {
+//       // return console.log(stone['name']);
+//       total = stone['price'] * stone['quantity'];
+//       // console.log(stone['name']);
+//       return total;
+//     }
+//   }
+// }
+// console.log(calcTotalPrice(stones, 'Бриллиант'));
