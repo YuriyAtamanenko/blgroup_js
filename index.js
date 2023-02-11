@@ -259,8 +259,39 @@
 // Напишіть функцію, яка приймає рядок і перетворює її на число
 
 // function toNumber(string) {
-    
 
 //     return Number(string)
 // }
 // console.log(toNumber(`10`))
+
+// 4. Паліндром
+
+// Паліндром - слово, речення чи послідовність символів, яка абсолютно однаково читається як у звичному напрямку, так і у зворотному. Наприклад, "Anna" - це паліндром, а "table" і "John" - ні.
+
+// function word(string) {
+//   string = string.toLowerCase();
+
+//   let reversString = string.split("").reverse().join("");
+
+//   if (string === reversString) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(word("Паліндром"));
+
+// Напишіть функцію, яка приймає два аргументи і повертає всі числа, які діляться на дільник. Перший аргумент – це масив чисел, а другий – дільник.
+const newArray = [];
+
+function calculator(array, b) {
+  for (let a of array) {
+    if (a % b === 0) {
+      newArray.push(a);
+    }
+  }
+  return newArray;
+}
+
+console.log(calculator([10, 20, 5, 7, 58], 5));
