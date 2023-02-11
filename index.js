@@ -296,14 +296,12 @@
 
 // console.log(calculator([10, 20, 5, 7, 58], 5));
 
-
 // Напишіть функцію pow(x,n), яка повертає x до ступеня n.
 // Інакше висловлюючись, множить x він n разів і повертає результат.
 // function pow(x, n){
 //     return Math.pow(x, n);
 // }
 // console.log(pow(5, 6))
-
 
 // Напишіть функцію min(a,b), яка повертає менше чисел a і b.
 // function min(a, b){
@@ -328,3 +326,47 @@
 // const splice = styles.splice(0, 1);
 // styles.unshift("Реп", "Реггі");
 // console.log(styles);
+
+// Наступна функція повертає true, якщо параметр age більше 18.
+// В іншому випадку вона запитує підтвердження через confirm і повертає його результат:
+
+// const askAge = prompt("Скок?");
+
+// function isAdult(age) {
+// 	if (age >= 18) {
+// 		return console.log("okay");
+// 	} else {
+// 		return console.log("bb");
+// 	}
+// }
+
+// isAdult(askAge);
+
+// TODO:==============================
+// Напишіть рішення, яке обчислює суму
+// Квадратного коріння для всіх чисел у яких квадратний корінь буде цілим числом і пушити числа в новий масив.
+// Math.sqrt();
+// Number.isInteger();
+const arr = [4, 3, 5, 16, 16, 33, 4, 9];
+const newArr = [];
+
+for (const elem of arr) {
+	if (Math.sqrt(elem) % 1 === 0) {
+		newArr.push(elem);
+	}
+}
+console.log(newArr);
+
+//TODO:==========================
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше число в масиві.
+//Додай перевірку що функція отримує масив
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// function findSmallerNumber(numbers) {
+// 	if (Array.isArray(numbers)) {
+// 		return Math.min(...numbers);
+// 	}
+// }
+
+// console.log(findSmallerNumber([2, 5, 35, 56, 12, 24, 7, 80, 3]));
