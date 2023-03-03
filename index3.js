@@ -1,62 +1,62 @@
-// // // const courses = [
-// // //   {
-// // //     name: "Basic HTML+CSS",
-// // //     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
-// // //   },
-// // //   {
-// // //     name: "Intermediate HTML+CSS",
-// // //     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
-// // //   },
-// // //   {
-// // //     name: "Basic JavaScript",
-// // //     topics: [
-// // //       "VSCode",
-// // //       "Type system",
-// // //       "Loops",
-// // //       "Function",
-// // //       "Git",
-// // //       "Conditions",
-// // //       "Classes",
-// // //       "GitHub",
-// // //       "DOM",
-// // //     ],
-// // //   },
-// // //   {
-// // //     name: "Intermediate JavaScript",
-// // //     topics: [
-// // //       "VSCode",
-// // //       "NPM",
-// // //       "Bundlers",
-// // //       "Transpiling",
-// // //       "Git",
-// // //       "Promises",
-// // //       "AJAX",
-// // //       "GitHub",
-// // //     ],
-// // //   },
-// // // ];
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Git",
+//       "Promises",
+//       "AJAX",
+//       "GitHub",
+//     ],
+//   },
+// ];
 
-// // //Зібрати в allTopics масив всіх предметів всіх курсів
-// // //Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
+//Зібрати в allTopics масив всіх предметів всіх курсів
+//Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
 
-// // // const allTopics = courses.flatMap(course => course.topics).filter((course, index, array) => array.indexOf(course) === index);
-// // // console.log(allTopics);
+// const allTopics = courses.flatMap(course => course.topics).filter((course, index, array) => array.indexOf(course) === index);
+// console.log(allTopics);
 
-// // //TODO:==============================================
-// // //Призначити знижку 20% на фрукти в масиві,
-// // //Присвоїти ID для кожного продукту
+// //TODO:==============================================
+//Призначити знижку 20% на фрукти в масиві,
+//Присвоїти ID для кожного продукту
 
-// // // const fruits = [
-// // //   { name: "apple", price: 200 },
-// // //   { name: "orange", price: 300 },
-// // //   { name: "grapes", price: 750 },
-// // // ];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-// // // const discount = fruits.map(fruit => { return {...fruit, price: fruit.price * 0.8, id: Date.now()}});
-// // // console.log(discount);
+// const discount = fruits.map(fruit => { return {...fruit, price: fruit.price * 0.8, id: Date.now()}});
+// console.log(discount);
 
-// // //?TODO:==============================================
-// // //Повернути об'єкт у якому вказується кількість тегів
+//?TODO:==============================================
+//Повернути об'єкт у якому вказується кількість тегів
 
 // const tweets = [
 // 	{id: "000", likes: 5, tags: ["js", "nodejs"]},
@@ -66,14 +66,14 @@
 // 	{id: "004", likes: 0, tags: ["js", "nodejs", "react"]},
 // ];
 
-// // const countLikes = tweets
-// // 	.flatMap((tweet) => tweet.tags)
-// // 	.reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1}), {});
+// const countLikes = tweets
+// 	.flatMap((tweet) => tweet.tags)
+// 	.reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1}), {});
 
-// // console.log(countLikes);
+// console.log(countLikes);
 
-// //TODO:==============================================
-// //Дізнатись загальні роки практики в об'єкті workers
+//TODO:==============================================
+//Дізнатись загальні роки практики в об'єкті workers
 
 // const workers = [
 // 	{id: 10, name: "Mango", years: 14},
@@ -146,7 +146,7 @@
 // const mango = makeShef("Mango");
 // mango("apple");
 
-//---HOMEWORK---
+//! --------HOMEWORK---------
 // TODO:==============================================
 // Напишіть функцію each(array, callback), яка
 // першим параметром приймає масив, а другим - функцію,
@@ -155,6 +155,19 @@
 // якого будуть результати виклику callback
 // callback функції повинна множити елементи на 2
 // ++++++++++++++++++++++++++++++++++++++++++
+
+// const numbers = [3, 5, 7, 12, 15, 8, 17];
+
+// function each(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     newArray.push(callback(array[i]));
+//   }
+//   return newArray;
+// }
+
+// console.log(each(numbers, value => value * 2));
+// console.log(numbers);
 
 //TODO:==============================================
 //Напишіть дві функції
@@ -167,6 +180,24 @@
 //продукту і логірующий їх у консоль
 //++++++++++++++++++++++++++++++++++++++++++
 
+// function makeProduct(name, price, callback) {
+//   const id = Date.now();
+//   const product = {
+//     id,
+//     name,
+//     price,
+//   };
+
+//   callback(product);
+// }
+
+// function showProduct(product) {
+//   console.log(`ID: ${product.id}: ${product.name}, цена: ${product.price}грн.`);
+// }
+
+// makeProduct('Торт', 200, showProduct);
+// makeProduct('Мыло', 20, showProduct);
+
 //TODO:=================01====================
 //Напишіть дві функції
 // letMeSeeYourName(callback) - запитує ім'я користувача
@@ -176,10 +207,24 @@
 //Реалізуй перевірку, що prompt не порожній
 //++++++++++++++++++++++++++++++++++++++++++++
 
-//TODO:==============================================
-/// Даний словник із міст та дат виступів рок-групи
+// function letMeSeeYourName(callback) {
+//   const name = prompt("Введіть ім'я!");
 
-/// Необхідно перетворити словник (key-value) на масив із назв міст
-/// Виведення міст має бути у хронологічному порядку
-/// Міста у яких концерт вже пройшов потрібно виключити
-/// Результат ["Умань", "Харків", "Одеса"]
+//   if (name === '') {
+//     alert('Строка не може бути порожньой!');
+//   }
+//   return callback(name);
+// }
+
+// function greet(name) {
+//   console.log(`Привіт ${name}`);
+// }
+
+// letMeSeeYourName(greet);
+//TODO:==============================================
+//  Даний словник із міст та дат виступів рок-групи
+
+//  Необхідно перетворити словник (key-value) на масив із назв міст
+//  Виведення міст має бути у хронологічному порядку
+//  Міста у яких концерт вже пройшов потрібно виключити
+//  Результат ["Умань", "Харків", "Одеса"]
