@@ -210,10 +210,11 @@
 // function letMeSeeYourName(callback) {
 //   const name = prompt("Введіть ім'я!");
 
-//   if (name === '') {
-//     alert('Строка не може бути порожньой!');
+//   if (name && name.trim()) {
+//     return callback(name);
 //   }
-//   return callback(name);
+
+//   alert('Поле не може бути порожнім!');
 // }
 
 // function greet(name) {
@@ -228,3 +229,21 @@
 //  Виведення міст має бути у хронологічному порядку
 //  Міста у яких концерт вже пройшов потрібно виключити
 //  Результат ["Умань", "Харків", "Одеса"]
+
+// const concerts = {
+//   Київ: new Date('2022-04-01'),
+//   Умань: new Date('2023-07-02'),
+//   Вінниця: new Date('2022-04-21'),
+//   Одеса: new Date('2023-07-15'),
+//   Хмельницький: new Date('2022-04-18'),
+//   Харків: new Date('2023-07-10'),
+// };
+
+// function getCity(obj) {
+//   const keys = Object.keys(obj)
+//     .filter(city => obj[city] > new Date())
+//     .sort((a, b) => obj[a] - obj[b]);
+//   return keys;
+// }
+
+// console.log(getCity(concerts));
