@@ -127,6 +127,8 @@
 
 // console.log(newCalc.numbers);
 
+// TODO ============================================
+
 // Задача: написати клас, який буде представляти зоопарк тварин.
 // У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
 // Кожен тип тварин повинен мати свої властивості та методи, наприклад,
@@ -212,24 +214,95 @@
 // Задача: Створіть клас "Круг", який має властивості радіуса та діаметру,
 //а також методи для обчислення площі та довжини кола.
 
+//? class Circle {
+//   constructor(radius, diameter) {
+//     this.radius = radius;
+//     this.diameter = diameter;
+//   }
+
+//   calculateArea(radius) {
+//     console.log(Math.round(Math.PI * Math.pow(radius, 2)));
+//   }
+
+//   calculateCircumference(radius) {
+//     console.log(Math.round(2 * Math.PI * radius));
+//   }
+// }
+
+// const circle = new Circle();
+// circle.calculateArea(5);
+// circle.calculateCircumference(5);
+
+// circle.calculateArea(7);
+// circle.calculateCircumference(7);
+
 //TODO:=============================================
-//Напиши class CarsManager  який створює об'єкти
-//Для управління салону автомобілів. Використати приватну змінну cars
-//Додай методи класу:
-//getModels() - повертайте масив усіх моделей
-//changeModel(oldModelName, newModelName) - Замінює стару модель на ному
-//getTotalPrice() - отримує суму усіх автомобілів
-//getMake(make) - повертає масив виробника
+// Напиши class CarsManager  який створює об'єкти
+// Для управління салону автомобілів. Використати приватну змінну cars
+// Додай методи класу:
+// getModels() - повертайте масив усіх моделей
+// changeModel(oldModelName, newModelName) - Замінює стару модель на ному
+// getTotalPrice() - отримує суму усіх автомобілів
+// getMake(make) - повертає масив виробника
 
 // const vehicles = [
-//   { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
-//   { make: "Toyota", model: "4Runner", type: "suv", price: 34210 },
-//   { make: "Ford", model: "F-150", type: "truck", price: 27110 },
-//   { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
-//   { make: "Mazda", model: "CX-9", type: "suv", price: 31520 },
-//   { make: "Toyota", model: "Sequoia", type: "suv", price: 45560 },
-//   { make: "Ford", model: "Fusion", type: "sedan", price: 22120 },
-//   { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
-//   { make: "Ford", model: "Explorer", type: "suv", price: 31660 },
-//   { make: "Toyota", model: "Tacoma", type: "truck", price: 24320 },
+//   { make: 'Honda', model: 'CR-V', type: 'suv', price: 24045 },
+//   { make: 'Toyota', model: '4Runner', type: 'suv', price: 34210 },
+//   { make: 'Ford', model: 'F-150', type: 'truck', price: 27110 },
+//   { make: 'Honda', model: 'Accord', type: 'sedan', price: 22455 },
+//   { make: 'Mazda', model: 'CX-9', type: 'suv', price: 31520 },
+//   { make: 'Toyota', model: 'Sequoia', type: 'suv', price: 45560 },
+//   { make: 'Ford', model: 'Fusion', type: 'sedan', price: 22120 },
+//   { make: 'Mazda', model: 'Mazda 6', type: 'sedan', price: 24195 },
+//   { make: 'Ford', model: 'Explorer', type: 'suv', price: 31660 },
+//   { make: 'Toyota', model: 'Tacoma', type: 'truck', price: 24320 },
 // ];
+
+// class CarsManager {
+//   #cars;
+
+//   constructor() {
+//     this.#cars = vehicles;
+//   }
+
+//   getModels() {
+//     const allModels = this.#cars.flatMap(car => car.model);
+//     return allModels;
+//   }
+
+//   changeModel(oldModelName, newModelName) {
+//     this.#cars.forEach(function (car) {
+//       if (car.model === oldModelName) {
+//         car.model = newModelName;
+//       }
+//     });
+//   }
+
+//   getTotalPrice() {
+//     const totalPrice = this.#cars
+//       .flatMap(car => car.price)
+//       .reduce((acc, number) => {
+//         return acc + number;
+//       }, 0);
+
+//     return totalPrice;
+//   }
+
+//   getMake(make) {
+//     const allMakeModel = this.#cars.filter(car => car.make === make);
+//     return allMakeModel;
+//   }
+// }
+
+// const newCars = new CarsManager();
+// console.log(newCars.getModels(vehicles));
+
+// newCars.changeModel('Mazda 6', 'Mazda 7');
+// newCars.changeModel('CX-9', 'CX-97');
+// console.table(vehicles);
+
+// console.log(newCars.getTotalPrice(vehicles));
+
+// console.log(newCars.getMake('Mazda'));
+// console.log(newCars.getMake('Ford'));
+//TODO:=============================================
