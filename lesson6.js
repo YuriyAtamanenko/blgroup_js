@@ -20,13 +20,13 @@
 // function onSubmitBtn(event) {
 //     event.preventDefault();
 //     const inputValue = form.taskName.value;
-    
+
 //     if (inputValue) {
 //         taskArray.push(inputValue);
 //         liAppend();
 //         saveToLocalStorage();
 //     }
-    
+
 // }
 // console.log(taskArray);
 
@@ -37,9 +37,9 @@
 //         const liItem = document.createElement("li");
 //         liItem.innerHTML = `<span>${task}</span><button class="delete-btn" data-index="${index}">Delete</button>`;
 //         list.appendChild(liItem);
-       
+
 //         liItem.querySelector(".delete-btn").addEventListener("click", delLiItem);
-   
+
 //     })
 // }
 
@@ -54,3 +54,126 @@
 // function saveToLocalStorage() {
 //     localStorage.setItem(saveData, JSON.stringify(taskArray));
 // }
+
+// TODO:=========================================
+// ЗАДАЧА 2
+// Якщо імейл і пароль користувача збігаються, зберігайте дані з форми при сабмите
+// у локальне сховище і змінюй кнопку login на logout і роби поля введення
+// Недоступними зміни.
+
+// При перезавантаженні сторінки, якщо користувач залогінений, ми маємо бачити logout-кнопку
+// та недоступні для зміни поля з даними користувача.
+// Клік по кнопці logout повертає все до початкового вигляду і видаляє дані користувача
+// З локального сховища.
+
+// Якщо введені дані не збігаються з потрібними даними, викликати аlert і
+// повідомляти про помилку.
+
+const USER_DATA = {
+    email: "user@mail.com",
+    password: "secret",
+};
+
+// const form = document.querySelector('#login-form');
+// const { email, password, button } = form.elements;
+// const localKey = 'authData';
+// let userData = {};
+// // console.log(userData);
+// if (localStorage.getItem(localKey)) {
+//     changeState();
+// }
+
+
+// form.addEventListener('submit', onClickSubmit);
+
+
+
+// function onClickSubmit(e) {
+//     e.preventDefault();
+
+//     if (button.textContent === 'Logout') {
+//         return reset();
+//     }
+//     // console.log('onClick');
+
+//     if (USER_DATA.email === email.value && USER_DATA.password === password.value) {
+//         userData.email = email.value.trim();
+//         userData.password = password.value.trim();
+//         localStorage.setItem(localKey, JSON.stringify(userData));
+//         form.reset();
+//         changeState();
+//         // console.log(userData);
+//     } else {
+//         alert('Введені данні не співпадають');
+//     }
+
+
+// }
+
+
+
+// function changeState() {
+//     button.textContent = 'Logout';
+//     email.disabled = true;
+//     password.disabled = true;
+// }
+
+// function reset() {
+//     button.textContent = 'Login';
+//     email.disabled = false;
+//     password.disabled = false;
+
+//     localStorage.removeItem(localKey);
+// }
+//---------------------Second Variant----------------------------------
+const form = document.querySelector('#login-form');
+const { email, password, button } = form.elements;
+const localKey = 'authData';
+let userData = JSON.parse(localStorage.getItem(localKey));
+
+// console.log(userData);
+if (userData) {
+    changeState();
+}
+
+
+form.addEventListener('submit', onClickSubmit);
+
+
+
+function onClickSubmit(e) {
+    e.preventDefault();
+
+    if (button.textContent === 'Logout') {
+        return reset();
+    }
+    // console.log('onClick');
+
+    if (USER_DATA.email === email.value && USER_DATA.password === password.value) {
+        userData = { email: email.value.trim(), password: password.value.trim() };
+        localStorage.setItem(localKey, JSON.stringify(userData));
+        form.reset();
+        changeState();
+        // console.log(userData);
+    } else {
+        alert('Введені данні не співпадають');
+    }
+
+
+}
+
+
+
+function changeState() {
+    button.textContent = 'Logout';
+    email.disabled = true;
+    password.disabled = true;
+}
+
+function reset() {
+    button.textContent = 'Login';
+    email.disabled = false;
+    password.disabled = false;
+
+    localStorage.removeItem(localKey);
+}
