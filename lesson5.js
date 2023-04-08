@@ -130,102 +130,102 @@
 
 // Взяти попереднє завдання з Зоопарком та вивести звірів, їх тип та особливості в DOM.
 // Додати до списку клас animalList.На елемент списку animalElement
-class Animal {
-  constructor(name, type) {
-    this.name = name;
-    this.type = type;
-  }
+// class Animal {
+//   constructor(name, type) {
+//     this.name = name;
+//     this.type = type;
+//   }
 
-  getInfo() {
-    return `name: ${this.name}, type: ${this.type}`;
-  }
+//   getInfo() {
+//     return `name: ${this.name}, type: ${this.type}`;
+//   }
 
-  feed() {
-    console.log(`feeding ${this.name} travoi`);
-  }
-}
+//   feed() {
+//     console.log(`feeding ${this.name} travoi`);
+//   }
+// }
 
-class Bird extends Animal {
-  constructor(name, type, wingspan) {
-    super(name, type);
-    this.wingspan = wingspan;
-  }
+// class Bird extends Animal {
+//   constructor(name, type, wingspan) {
+//     super(name, type);
+//     this.wingspan = wingspan;
+//   }
 
-  getInfo() {
-    return `${super.getInfo()}, wingspan: ${this.wingspan}`;
-  }
+//   getInfo() {
+//     return `${super.getInfo()}, wingspan: ${this.wingspan}`;
+//   }
 
-  feed() {
-    super.feed();
-  }
-}
+//   feed() {
+//     super.feed();
+//   }
+// }
 
-// grus.feed();
+// // grus.feed();
 
-class Hunter extends Animal {
-  constructor(name, type, mane) {
-    super(name, type);
-    this.mane = mane;
-  }
+// class Hunter extends Animal {
+//   constructor(name, type, mane) {
+//     super(name, type);
+//     this.mane = mane;
+//   }
 
-  getInfo() {
-    return `${super.getInfo()}, mane: ${this.mane}`;
-  }
+//   getInfo() {
+//     return `${super.getInfo()}, mane: ${this.mane}`;
+//   }
 
-  feed() {
-    super.feed();
-  }
-}
+//   feed() {
+//     super.feed();
+//   }
+// }
 
-// lion.getInfo();
+// // lion.getInfo();
 
-class Zoo {
-  constructor() {
-    this.zooWrapper = document.querySelector(".zooWrapper");
-    this.animalList = document.createElement("ul");
-    this.animals = [];
-  }
-  addAnimals(someAnimal) {
-    return this.animals.push(someAnimal);
-  }
+// class Zoo {
+//   constructor() {
+//     this.zooWrapper = document.querySelector(".zooWrapper");
+//     this.animalList = document.createElement("ul");
+//     this.animals = [];
+//   }
+//   addAnimals(someAnimal) {
+//     return this.animals.push(someAnimal);
+//   }
 
-  getAllAnimals() {
-    this.animals.forEach((animal) => {
-      console.log(animal.getInfo());
-    });
-  }
+//   getAllAnimals() {
+//     this.animals.forEach((animal) => {
+//       console.log(animal.getInfo());
+//     });
+//   }
 
-  draw() {
-    this.animals.forEach((obj) => {
-      const li = document.createElement("li");
-      const animalName = document.createElement("p");
-      const animalType = document.createElement("p");
-      const animalSpecies = document.createElement("p");
+//   draw() {
+//     this.animals.forEach((obj) => {
+//       const li = document.createElement("li");
+//       const animalName = document.createElement("p");
+//       const animalType = document.createElement("p");
+//       const animalSpecies = document.createElement("p");
 
-      animalName.textContent = `name:${obj.name}`;
-      animalType.textContent = `type:${obj.type}`;
-      if (obj.mane) {
-        animalSpecies.textContent = `mane:${obj.mane}`;
-      }
-      if (obj.wingspan) {
-        animalSpecies.textContent = `wingspan:${obj.wingspan}`;
-      }
-      li.append(animalName, animalType, animalSpecies);
-      this.animalList.prepend(li);
-      this.zooWrapper.prepend(this.animalList);
-      this.animalList.classList.add("animalList");
-      li.classList.add("animalElement");
-    });
-  }
-}
+//       animalName.textContent = `name:${obj.name}`;
+//       animalType.textContent = `type:${obj.type}`;
+//       if (obj.mane) {
+//         animalSpecies.textContent = `mane:${obj.mane}`;
+//       }
+//       if (obj.wingspan) {
+//         animalSpecies.textContent = `wingspan:${obj.wingspan}`;
+//       }
+//       li.append(animalName, animalType, animalSpecies);
+//       this.animalList.prepend(li);
+//       this.zooWrapper.prepend(this.animalList);
+//       this.animalList.classList.add("animalList");
+//       li.classList.add("animalElement");
+//     });
+//   }
+// }
 
-const zoo = new Zoo();
+// const zoo = new Zoo();
 
-const lion = new Hunter("Лев", "Охотник", "Пишна");
-zoo.addAnimals(lion);
+// const lion = new Hunter("Лев", "Охотник", "Пишна");
+// zoo.addAnimals(lion);
 
-const grus = new Bird("Журавель", "Сельская", 2);
-zoo.addAnimals(grus);
+// const grus = new Bird("Журавель", "Сельская", 2);
+// zoo.addAnimals(grus);
 
-zoo.getAllAnimals();
-zoo.draw();
+// zoo.getAllAnimals();
+// zoo.draw();
