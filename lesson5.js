@@ -181,6 +181,8 @@ class Hunter extends Animal {
 
 class Zoo {
   constructor() {
+    this.zooWrapper = document.querySelector(".zooWrapper");
+    this.animalList = document.createElement("ul");
     this.animals = [];
   }
   addAnimals(someAnimal) {
@@ -190,6 +192,29 @@ class Zoo {
   getAllAnimals() {
     this.animals.forEach((animal) => {
       console.log(animal.getInfo());
+    });
+  }
+
+  draw() {
+    this.animals.forEach((obj) => {
+      const li = document.createElement("li");
+      const animalName = document.createElement("p");
+      const animalType = document.createElement("p");
+      const animalSpecies = document.createElement("p");
+
+      animalName.textContent = `name:${obj.name}`;
+      animalType.textContent = `type:${obj.type}`;
+      if (obj.mane) {
+        animalSpecies.textContent = `mane:${obj.mane}`;
+      }
+      if (obj.wingspan) {
+        animalSpecies.textContent = `wingspan:${obj.wingspan}`;
+      }
+      li.append(animalName, animalType, animalSpecies);
+      this.animalList.prepend(li);
+      this.zooWrapper.prepend(this.animalList);
+      this.animalList.classList.add("animalList");
+      li.classList.add("animalElement");
     });
   }
 }
@@ -203,3 +228,4 @@ const grus = new Bird("Журавель", "Сельская", 2);
 zoo.addAnimals(grus);
 
 zoo.getAllAnimals();
+zoo.draw();
